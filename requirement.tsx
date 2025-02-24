@@ -1,3 +1,6 @@
+streamlit
+pandas
+openpyxl
 ﻿altair==5.5.0
 attrs==25.1.0
 blinker==1.9.0

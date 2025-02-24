@@ -8,7 +8,7 @@ st.set_page_config(page_title = "Data sweeper", layout = 'wide' )
 # custom css
 st.markdown(
     """ 
-    style>
+    <style>
     .stApp{
         background-color: black;
         color: white
@@ -53,7 +53,7 @@ if uploaded_files:
 
             with col2: 
                 if st.button(f"Fill missing values for {file.name}"):
-                    numeric_cols = df.select_dtypes(includes=['number']).columns
+                    numeric_cols = df.select_dtypes(include=['number']).columns
                     df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
                     st.write("Missing values have been filled!")    
 
